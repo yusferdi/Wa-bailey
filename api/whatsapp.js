@@ -1,5 +1,6 @@
-import makeWASocket, { fetchLatestBaileysVersion } from "@whiskeysockets/baileys"
-import { createClient } from "@supabase/supabase-js"
+const makeWASocket = require("@whiskeysockets/baileys").default
+const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys")
+const { createClient } = require("@supabase/supabase-js")
 
 let NEXT_PUBLIC_SUPABASE_URL = "https://ijmvdmbaedokofzumxht.supabase.co"
 let NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlqbXZkbWJhZWRva29menVteGh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1NzI4ODUsImV4cCI6MjA2NTE0ODg4NX0.TTYFdMNG86xPIyEaRYjUE1Gq72epd_9-c2Y9vxaO5sU";
