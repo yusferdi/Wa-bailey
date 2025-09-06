@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
   // Ambil session dari Supabase
   const { data } = await supabase
-    .from("sessions")
+    .from("sessions_wa")
     .select("data")
     .eq("id", "default")
     .single()
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     },
     saveCreds: async (newCreds) => {
       await supabase
-        .from("sessions")
+        .from("sessions_wa")
         .upsert({ id: "default", data: newCreds })
     }
   }
